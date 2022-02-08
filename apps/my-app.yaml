@@ -10,7 +10,7 @@ spec:
     - name: my-server
       type: webservice
       properties:
-        image: registry.cn-shanghai.aliyuncs.com/yogoops/testkubevela:v1.0.0-h5-dev
+        image: registry.cn-shanghai.aliyuncs.com/yogoops/testkubevela:v0.7.4
         ports: 
           - port: 80
             name: http
