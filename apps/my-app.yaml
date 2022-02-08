@@ -9,7 +9,7 @@ spec:
       type: webservice
       properties:
         image: ghcr.io/fogdong/test-fog:master-cba5605f-1632714412
-        port: 8088
+        port: 8089
         env:
           - name: DB_HOST
             value: mysql-cluster-mysql.default.svc.cluster.local:3306
@@ -23,4 +23,4 @@ spec:
           properties:
             domain: testsvc.example.com
             http:
-              /: 8088
+              /: 8089
