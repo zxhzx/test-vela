@@ -11,13 +11,9 @@ spec:
       type: webservice
       properties:
         image: registry.cn-shanghai.aliyuncs.com/yogoops/testkubevela:v1.0.0-h5-dev
-        port: 80
-      traits:
-        - type: ClusterIP
-          ports:
-          - name: http
-            port: 80
-            protocol: TCP
-            targetPort: 80
-          selector:
-            app: my-app
+        ports: 
+          - port: 80
+            name: http
+            protocol: "TCP"
+            expose: true
+        exposeType: "ClusterIP"
