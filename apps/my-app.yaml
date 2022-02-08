@@ -1,6 +1,8 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
+  labels:
+    app: app-h5
   name: my-app
   namespace: default
 spec:
@@ -9,10 +11,16 @@ spec:
       type: webservice
       properties:
         image: registry.cn-shanghai.aliyuncs.com/yogoops/testkubevela:v1.0.0-h5-dev
-        prot: 80
+        ports:
+          - name: http
+            containerPort: 80
+            protocol: TCP
       traits:
-        - type: ingress
-          properties:
-            domain: testsvc.example.com
-            http:
-              /: 80
+        - type: ClusterIP
+          ports:
+          - name: http
+            port: 80
+            protocol: TCP
+            targetPort: 80
+          selector:
+            app: my-app
