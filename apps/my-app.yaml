@@ -9,3 +9,10 @@ spec:
       type: webservice
       properties:
         image: registry.cn-shanghai.aliyuncs.com/yogoops/testkubevela:v1.0.2-h5-dev
+        prot: 80
+      traits:
+        - type: ingress
+          properties:
+            domain: testsvc.example.com
+            http:
+              /: 80
