@@ -8,8 +8,7 @@ spec:
     - name: my-server
       type: webservice
       properties:
-        image: ghcr.io/fogdong/test-fog:master-cba5605f-1632714412
-        port: 8089
+        image: registry.cn-shanghai.aliyuncs.com/yogoops/testkubevela:v1.0.2-h5-dev
         env:
           - name: DB_HOST
             value: mysql-cluster-mysql.default.svc.cluster.local:3306
