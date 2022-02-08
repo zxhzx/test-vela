@@ -2,7 +2,7 @@ apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
   labels:
-    app: app-h5
+    app: shire
   name: my-app
   namespace: default
 spec:
@@ -23,4 +23,4 @@ spec:
             protocol: TCP
             targetPort: 80
           selector:
-            app: my-app
+            app: shire
