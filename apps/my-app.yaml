@@ -15,12 +15,3 @@ spec:
           - name: http
             containerPort: 80
             protocol: TCP
-      traits:
-        - type: ClusterIP
-          ports:
-          - name: http
-            port: 80
-            protocol: TCP
-            targetPort: 80
-          selector:
-            app: my-app
