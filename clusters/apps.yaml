@@ -16,6 +16,6 @@ spec:
       pullInterval: 1m
       git:
         # 监听变动的分支
-        branch: main
+        branch: master
       # 监听变动的路径，指向仓库中 infrastructure 目录下的文件
       path: ./apps
