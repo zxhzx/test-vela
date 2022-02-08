@@ -1,8 +1,6 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
-  labels:
-    app: app-h5
   name: my-app
   namespace: default
 spec:
@@ -15,12 +13,11 @@ spec:
           - name: http
             containerPort: 80
             protocol: TCP
-      traits:
-        - type: ClusterIP
-          ports:
-          - name: http
-            port: 80
-            protocol: TCP
-            targetPort: 80
-          selector:
-            app: my-app
+      # traits:
+    - name: my-server-svc
+      type: ClusterIP
+      ports:
+      - name: http
+        port: 80
+        protocol: TCP
+        targetPort: 80
