@@ -9,10 +9,3 @@ spec:
       type: webservice
       properties:
         image: registry.cn-shanghai.aliyuncs.com/yogoops/testkubevela:v1.0.2-h5-dev
-
-      traits:
-        - type: ingress
-          properties:
-            domain: kubevela.example.com
-            http:
-              /: 8089
